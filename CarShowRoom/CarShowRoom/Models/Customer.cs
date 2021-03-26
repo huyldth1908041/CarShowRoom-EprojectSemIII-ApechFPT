@@ -14,7 +14,9 @@ namespace CarShowRoom.Models
         {
             Active, Deactive, Delete
         }
+        public int VehicleId { get; set; }
+    
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+
     }
 }
