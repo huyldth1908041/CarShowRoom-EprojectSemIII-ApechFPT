@@ -10,6 +10,7 @@ namespace CarShowRoom.Models
     public class Vehicle
     {
         public int Id { get; set; }
+        [Required]
         public string Color { get; set; }
         [Required]
         public string Name { get; set; }
@@ -21,7 +22,10 @@ namespace CarShowRoom.Models
         [Index(IsUnique = true)]
         public string FN { get; set; }
         [Display(Name="Price")]
+        [Required]
+        [Range(0, float.MaxValue, ErrorMessage = "Please enter valid float Number")]
         public float SalePrice { get; set; }
+        [Required]
         public string Description { get; set; }
         public VehicleType Type { get; set; }
         public VehicleControlType Control { get; set; }

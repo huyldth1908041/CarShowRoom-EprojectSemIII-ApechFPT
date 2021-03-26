@@ -15,7 +15,7 @@ namespace CarShowRoom.Controllers
         {
             _db = new ShowRoomDataContext();
         }
-      
+
 
         public ActionResult CreateVehicle()
         {
@@ -31,9 +31,9 @@ namespace CarShowRoom.Controllers
             {
                 return View(model);
             }
-     
+
             _db.Vehicles.Add(model);
-            
+
             _db.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
@@ -41,9 +41,51 @@ namespace CarShowRoom.Controllers
 
         public ActionResult CreatePurchaseOrder()
         {
+            var listModels = _db.VehicleModels.ToList();
+            ViewBag.Models = listModels;
             return View();
         }
+        [HttpPost]
+        public ActionResult CreatePurchaseOrder(PurchaseOrderDetail model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            //add new purchase order
+            var newOrder = _db.PurchaseOrders.Add(new PurchaseOrder()
+            {
+                CreatedAt = DateTime.Now,
+                UpdatedTime = DateTime.Now,
+                Quantity = model.Quantity,
+                Status = PurchaseOrder.PurchaseOrderStatus.Pending,
+                TotalPrice = model.Price * model.Quantity
+                
+            });
+            _db.SaveChanges();
+            //add new order detaile
+            model.CreatedAt = DateTime.Now;
+            model.UpdatedTime = DateTime.Now;
+            model.PurchaseOrderId = newOrder.Id;
+            _db.PurchaseOrderDetails.Add(model);
+            _db.SaveChanges();
 
-        
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult ListPurchaseOrder()
+        {
+            var listOrders = _db.PurchaseOrders.ToList();
+            return View(listOrders);
+        }
+
+        public ActionResult PurchaseOrderDetail(int id)
+        {
+            var listOrdersDetails = _db.PurchaseOrderDetails.Where(x => x.PurchaseOrderId == id).ToList();
+            return View(listOrdersDetails);
+        }
+
+
     }
 }

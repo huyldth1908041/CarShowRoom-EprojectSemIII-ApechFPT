@@ -10,8 +10,10 @@ namespace CarShowRoom.Models
         [StringLength(255)]
         [Index(IsUnique = true)]
         public string ModelNumber { get; set; }
+        [Required]
         public string ModelName { get; set; }
         public VehicleModelStatus Status { get; set; }
+        
         public string Descriptions { get; set; }
 
         public int BrandId { get; set; }

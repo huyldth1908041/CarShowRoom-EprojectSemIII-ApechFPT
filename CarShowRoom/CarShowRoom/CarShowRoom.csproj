@@ -151,6 +151,22 @@
     <Compile Include="Migrations\202103260919580_add-order.Designer.cs">
       <DependentUpon>202103260919580_add-order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103261135140_Add-TimeStamp.cs" />
+    <Compile Include="Migrations\202103261135140_Add-TimeStamp.Designer.cs">
+      <DependentUpon>202103261135140_Add-TimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103261156217_Update.cs" />
+    <Compile Include="Migrations\202103261156217_Update.Designer.cs">
+      <DependentUpon>202103261156217_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103261204013_Update-Model.cs" />
+    <Compile Include="Migrations\202103261204013_Update-Model.Designer.cs">
+      <DependentUpon>202103261204013_Update-Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103261322574_Update-Model-relation-ship.cs" />
+    <Compile Include="Migrations\202103261322574_Update-Model-relation-ship.Designer.cs">
+      <DependentUpon>202103261322574_Update-Model-relation-ship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -616,6 +632,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ShowRoom\CreateVehicle.cshtml" />
+    <Content Include="Views\ShowRoom\CreatePurchaseOrder.cshtml" />
+    <Content Include="Views\ShowRoom\ListPurchaseOrder.cshtml" />
+    <Content Include="Views\ShowRoom\PurchaseOrderDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -644,6 +663,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103260919580_add-order.resx">
       <DependentUpon>202103260919580_add-order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103261135140_Add-TimeStamp.resx">
+      <DependentUpon>202103261135140_Add-TimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103261156217_Update.resx">
+      <DependentUpon>202103261156217_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103261204013_Update-Model.resx">
+      <DependentUpon>202103261204013_Update-Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103261322574_Update-Model-relation-ship.resx">
+      <DependentUpon>202103261322574_Update-Model-relation-ship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
