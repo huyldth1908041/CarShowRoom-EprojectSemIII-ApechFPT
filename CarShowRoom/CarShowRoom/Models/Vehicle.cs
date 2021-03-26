@@ -11,6 +11,8 @@ namespace CarShowRoom.Models
     {
         public int Id { get; set; }
         public string Color { get; set; }
+        [Required]
+        public string Name { get; set; }
         public string Cover { get; set; }
         [StringLength(255)]
         [Index(IsUnique = true)]
@@ -18,6 +20,7 @@ namespace CarShowRoom.Models
         [StringLength(255)]
         [Index(IsUnique = true)]
         public string FN { get; set; }
+        [Display(Name="Price")]
         public float SalePrice { get; set; }
         public string Description { get; set; }
         public VehicleType Type { get; set; }
@@ -47,9 +50,6 @@ namespace CarShowRoom.Models
         //navigation property
         public virtual VehicleModel VehicleModel { get; set; }
 
-        //foreign key
-        public int CustomerId { get; set; }
-        //navigation property
-        public virtual Customer Customer { get; set; }
+
     }
 }
