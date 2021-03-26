@@ -16,10 +16,10 @@ namespace CarShowRoom.Models
         public string Name { get; set; }
         public string Cover { get; set; }
         [StringLength(255)]
-        [Index(IsUnique = true)]
+       
         public string VIN { get; set; }
         [StringLength(255)]
-        [Index(IsUnique = true)]
+      
         public string FN { get; set; }
         [Display(Name="Price")]
         [Required]

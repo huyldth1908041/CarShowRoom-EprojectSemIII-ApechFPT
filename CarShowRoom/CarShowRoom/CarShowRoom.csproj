@@ -151,6 +151,7 @@
     <Compile Include="Migrations\202103260919580_add-order.Designer.cs">
       <DependentUpon>202103260919580_add-order.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Migrations\202103261135140_Add-TimeStamp.cs" />
     <Compile Include="Migrations\202103261135140_Add-TimeStamp.Designer.cs">
       <DependentUpon>202103261135140_Add-TimeStamp.cs</DependentUpon>
@@ -166,6 +167,11 @@
     <Compile Include="Migrations\202103261322574_Update-Model-relation-ship.cs" />
     <Compile Include="Migrations\202103261322574_Update-Model-relation-ship.Designer.cs">
       <DependentUpon>202103261322574_Update-Model-relation-ship.cs</DependentUpon>
+
+    <Compile Include="Migrations\202103261349274_Delete-Unique-Constraints.cs" />
+    <Compile Include="Migrations\202103261349274_Delete-Unique-Constraints.Designer.cs">
+      <DependentUpon>202103261349274_Delete-Unique-Constraints.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -664,6 +670,7 @@
     <EmbeddedResource Include="Migrations\202103260919580_add-order.resx">
       <DependentUpon>202103260919580_add-order.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Migrations\202103261135140_Add-TimeStamp.resx">
       <DependentUpon>202103261135140_Add-TimeStamp.cs</DependentUpon>
     </EmbeddedResource>
@@ -675,6 +682,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103261322574_Update-Model-relation-ship.resx">
       <DependentUpon>202103261322574_Update-Model-relation-ship.cs</DependentUpon>
+
+    <EmbeddedResource Include="Migrations\202103261349274_Delete-Unique-Constraints.resx">
+      <DependentUpon>202103261349274_Delete-Unique-Constraints.cs</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
