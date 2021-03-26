@@ -37,5 +37,13 @@ namespace CarShowRoom.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
+
+
+        public ActionResult CreatePurchaseOrder()
+        {
+            return View();
+        }
+
+        
     }
 }

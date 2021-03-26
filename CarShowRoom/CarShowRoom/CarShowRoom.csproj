@@ -147,9 +147,15 @@
     <Compile Include="Migrations\202103260848133_Delete-CustomerId.Designer.cs">
       <DependentUpon>202103260848133_Delete-CustomerId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103260919580_add-order.cs" />
+    <Compile Include="Migrations\202103260919580_add-order.Designer.cs">
+      <DependentUpon>202103260919580_add-order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\PurchaseOrder.cs" />
+    <Compile Include="Models\PurchaseOrderDetail.cs" />
     <Compile Include="Models\ShowRoomDataContext.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\VehicleModel.cs" />
@@ -635,6 +641,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103260848133_Delete-CustomerId.resx">
       <DependentUpon>202103260848133_Delete-CustomerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103260919580_add-order.resx">
+      <DependentUpon>202103260919580_add-order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
