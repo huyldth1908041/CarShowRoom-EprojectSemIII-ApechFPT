@@ -151,6 +151,10 @@
     <Compile Include="Migrations\202103260919580_add-order.Designer.cs">
       <DependentUpon>202103260919580_add-order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103261349274_Delete-Unique-Constraints.cs" />
+    <Compile Include="Migrations\202103261349274_Delete-Unique-Constraints.Designer.cs">
+      <DependentUpon>202103261349274_Delete-Unique-Constraints.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -644,6 +648,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103260919580_add-order.resx">
       <DependentUpon>202103260919580_add-order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103261349274_Delete-Unique-Constraints.resx">
+      <DependentUpon>202103261349274_Delete-Unique-Constraints.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
